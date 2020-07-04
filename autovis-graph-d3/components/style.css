@@ -1,0 +1,878 @@
+body {
+  background-color: black;
+  color: #FFFFFF;
+  font-family: "M PLUS 1p";
+}
+
+h1, h2, h3 {
+  font-family: "M PLUS 1p";
+  font-weight: 200;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.section {
+  margin-bottom: 120px;
+}
+
+div#header {
+  width: 100%;
+  height: 750px;
+  /* background: #232323 0% 0% no-repeat padding-box; */
+  overflow: hidden;
+}
+
+#background-video {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: auto;
+}
+
+#youtube_player {
+  width: 100%;
+  height: auto;
+  min-height: 320px;
+  margin: 0px 0px;
+}
+
+
+h1 {
+  /* タイトル */
+  font-size: 48px;
+  margin: 5px;
+  color: #FFFFFF;
+  font-weight: 100;
+}
+
+h2 {
+  /* 見出し */
+  font-size: 34px;
+  margin: 5px;
+}
+
+h3 {
+  /* 小見出し */
+  font-size: 20px;
+}
+
+h1.about {
+  color: #FFFFFF;
+  font-size xx-large;
+}
+
+h1.product-name {
+  /* text-decoration: underline; */
+  margin-left: 5px;
+  text-align: left;
+  font-size: 24px;
+  /* border-bottom: 1px solid white; */
+}
+
+h2.concept-message {
+  margin-top: -75px;
+  font-size: 32px;
+  letter-spacing: 2px;
+}
+
+h1.product-name:before {
+  background: #FFFFFF;
+  content: "";
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  background-size: contain;
+  vertical-align: middle;
+  margin-top: -6px;
+}
+
+h3.device-type {
+  text-decoration: underline;
+}
+
+a, a:hover {
+  color: #FFFFFF;
+}
+
+a.link-inside-button {
+  display:inline-block;
+  width:100%;
+  height:auto;
+}
+
+p {
+  margin: 10px 0%;
+}
+
+p.brand-description {
+}
+
+img {
+  /* border: 1px solid white; */
+  padding: 3px;
+}
+
+button {
+  background-color: #000000;
+}
+
+#device-not-compatible, #browser-not-compatible {
+  height: 750px;
+  text-align: center;
+  display: none;
+  font-size: 14px;
+}
+
+#device-not-compatible-body, #browser-not-compatible-body {
+  top: 10%;
+  width: 100%;
+  height: 90%;
+  min-width: 350px;
+  max-width: 1080px;
+
+  background: transparent url("img/fix/backcarry.jpg") bottom no-repeat padding-box;
+  background-size: contain;
+  background-size: 100% auto;
+}
+
+#device-not-compatible-body p, #browser-not-compatible-body p {
+  margin-top: 5%;
+  font-size: 14px;
+  line-height: 2em;
+}
+
+#movie-button {
+  width: 320px;
+  height: 65px;
+  font-size: 14px;
+  margin-bottom: 30px;
+
+  color: #FFFFFF;
+  border: 0px solid #707070;
+
+  /*
+  border-radius: 33px;
+  */
+  opacity: 1;
+}
+
+.header-description {
+  width: 95%;
+
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  text-align: center;
+  color: #707070;
+  opacity: 1;
+}
+
+.header-description h1 {
+  margin-top: 100px;
+  font-size: 44px;
+  letter-spacing: 1px;
+}
+
+#artroom {
+  width: 100%;
+  position: relative;
+  background: transparent url("img/fix/artroom.jpg") 50% 0% no-repeat padding-box;
+  background-position: 50% 20px;
+  background-size: contain;
+}
+
+#iphone_img {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
+  height: 60%;
+  width: auto;
+  max-width: 350px;
+}
+
+#special-movie {
+  margin-top: 50px;
+}
+
+#trying-ar-button {
+  font-size: 20px;
+  margin: 10px;
+  width: 307px;
+  height: 50px;
+
+  color: #FFAA00;
+  border: 1px solid #FBA700;
+  opacity: 1;
+}
+
+#trying-ar-button:hover {
+  color: #000000;
+  background-color: #FFAA00;
+}
+
+#trying-ar-description {
+  font-size: 9px;
+}
+
+#suitcase-logo {
+  width: 100%;
+}
+
+#product-summary-1, #product-summary-2 {
+  width: 40%;
+  max-width: 350px;
+  height: auto;
+  padding-bottom: 20px;
+  opacity: 1;
+}
+
+#product-summary-1 img, #product-summary-2 img{
+  width: 100%;
+  max-width: 350px;
+}
+
+.product {
+  height: auto;
+  width: 90%;
+  opacity: 1;
+  padding: 10% 20px;
+  margin-top: 25px;
+}
+
+#FP-90 {
+  margin-bottom: 50px;
+  background-image: url("img/fix/fp90frame_top.jpg"), url("img/fix/fp90frame.jpg"), url("img/fix/fp90frame_bottom.jpg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 100% auto, 100% 90%, 100% auto;
+  background-position: center top, 50% 50%, center bottom;
+}
+
+#FP-90 h1.product-name:before {
+  background: #FFAA00;
+}
+
+#FPZ-07 {
+  background-image: url("img/fix/fpz07frame_top.jpg"), url("img/fix/fpz07frame.jpg"), url("img/fix/fpz07frame_bottom.jpg");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 100% auto, 100% 90%, 100% auto;
+  background-position: center top, 50% 50%, center bottom;
+}
+
+#FPZ-07 h1.product-name:before {
+  background: #0099FF;
+}
+
+img.wire-frame-text {
+  width: 60%;
+  max-width: 350px;
+}
+
+img.example-text {
+  margin-top: 30px;
+  width: 50%;
+  max-width: 250px;
+}
+
+img.wire-frame-thumb {
+  width: 70%;
+}
+
+img.example-img-thumb {
+  width: 60%;
+}
+
+.product-detail-button {
+  width: 80%;
+  max-width: 300px;
+  height: 33px;
+  margin: 20px;
+  vertical-align: middle;
+  color: #1E1E1E;
+  border: 1px solid #707070;
+  border-radius: 12px;
+  opacity: 1;
+}
+
+#FP-90 .product-detail-button {
+  color: #1E1E1E;
+  background: #F8931F 0% 0% no-repeat padding-box;
+  border-color: #F8931F;
+}
+
+#FP-90 .product-detail-button a, #FPZ-07 .product-detail-button a  {
+  color: #1E1E1E;
+}
+
+#FP-90 .product-detail-button:hover a, #FPZ-07 .product-detail-button:hover a  {
+  color: #FFFFFF;
+}
+
+#FP-90 .product-detail-button:hover {
+  color: #F8931F;
+  background: #1E1E1E 0% 0% no-repeat padding-box;
+}
+
+#FPZ-07 .product-detail-button {
+  color: #1E1E1E;
+  background: #00CFCF 0% 0% no-repeat padding-box;
+  border-color: #00CFCF;
+}
+
+#FPZ-07 .product-detail-button:hover {
+  color: #00CFCF;
+  background: #1E1E1E 0% 0% no-repeat padding-box;
+}
+
+.product-header {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.product-header img{
+  width: 70%;
+  min-width: 300px;
+}
+
+p.product-ar-note{
+  width: 80%;
+  font-size: 9px;
+  margin-left: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.product-model-viewer {
+  left: 10%;
+  width: 80%;
+  height: auto;
+  min-height: 400px;
+  max-height: 500px;
+}
+
+.product-ar-link {
+  font-size: 20px;
+  letter-spacing: 0px;
+  margin: 10px;
+  opacity: 1;
+}
+
+#FPZ-07 .product-ar-link a {
+  color: #00CFCF;
+}
+
+#FP-90 .product-ar-link a {
+  color: #F7931E;
+}
+
+.product-ar-link a::after, .brand-link a::after{
+  content: '';
+  position: absolute;
+  margin-top: 24px;
+  left: 50%;
+  width:100%;
+  max-width: 300px;
+  height:1px;
+  background-color:#ffffff;
+  transform: scaleX(0) translateX(-50%);
+  transition: all .4s ease;
+}
+
+.product-ar-link a:hover::after, .brand-link a:hover::after{
+  transform: scaleX(1) translateX(-50%);
+}
+
+.product-ar-link:before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  /* AR のロゴをいれる */
+  background-image: url("img/fix/ARKit-Control-Label-Icon-White.png");
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.device-description {
+  margin-left: 5px;
+}
+
+#environment {
+  width: 85%;
+  height: auto;
+  padding-top: 60px;
+  padding-left: 10%;
+  padding-bottom: 60px;
+
+  margin-bottom: 10px;
+
+  text-align: left;
+  background: transparent url("img/fix/environment.jpg");
+  background-size: 100% 100%;
+}
+
+#environment .device-description {
+  width: 90%;
+  text-align: justify;
+}
+
+p.device-description {
+  font-size: 14px;
+}
+
+#SNS_sharing {
+  background: transparent url("img/fix/backcarry.jpg") bottom no-repeat padding-box;
+  background-size: contain;
+  background-size: 80% auto;
+}
+
+h2.SNS-header {
+  text-decoration: underline;
+}
+
+p.SNS-description {
+  font-size: 14px;
+  margin-bottom: 28px;;
+}
+
+h3.product-tagline {
+  letter-spacing: 1.5px;
+  margin-bottom: 15px;
+}
+
+.sns-icon {
+  margin: 4px;
+  color: #FFFFFF;
+  width: 64px;
+}
+
+img.sns-images-thumb {
+  width: 65%;
+  margin: 15px;
+}
+
+img.sns-two-images-thumb {
+  width: 30%;
+  margin: 2.5%;
+}
+
+#protex-brand {
+  text-align: center;
+}
+
+#protex-body {
+  height: auto;
+  width: 85%;
+  padding-top: 50px;
+
+  padding-bottom: 100px;
+  background: transparent url("img/fix/about_frame.jpg") 20% 80% no-repeat;
+  background-size: 100% 100%;
+}
+
+#protex-logo-img img {
+  width: 60%;
+  margin-top: 20px;
+  min-width: 350px;
+}
+
+#protex-body .brand-img img {
+  width: 60%;
+}
+
+#online-shop-button {
+  margin: 10px;
+  width: 80%;
+  max-width: 300px;
+  height: 33px;
+  border: 1px solid #03FE03;
+}
+
+#online-shop-button:hover {
+  background-color: #03FE03;
+}
+
+#online-shop-button:hover a {
+  color: #1E1E1E;
+}
+
+#online-shop-button a {
+  color: #03FE03;
+}
+
+.brand-description {
+  font-size: 14px;
+  margin-left: 10%;
+  width: 80%;
+  text-align: justify;
+}
+
+#qr-code {
+  height: 50%;
+  width: auto;
+  margin-top: 15px;
+  vertical-align: center;
+}
+
+#howto-browser {
+  height: 50%;
+  width: auto;
+  margin-top: 15px;
+  vertical-align: center;
+}
+
+#footer {
+  width: 70%;
+  font-size: 9px;
+  min-width: 350px;
+}
+
+#dendoh-logo-img {
+  width: 150px;
+}
+
+.footer-sitemap a {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0px;
+  color: #A0A0A0;
+  text-decoration: underline;
+  margin: 5px;
+  opacity: 1;
+}
+
+.footer-copyright {
+  text-align:center;
+  margin: 5px;
+  font-size: 10px;
+}
+
+
+.scroll-ui-container {
+  text-align: center;
+}
+
+#header a.scroll-ui{
+  top: 80%;
+}
+
+#product-list a.scroll-ui{
+  top: 100%;
+  /* left: 50%; */
+}
+
+a.scroll-ui {
+  position: absolute;
+  font-size: 14px;
+  color: #FFFFFF;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+a.scroll-ui p {
+  margin-top: 10px;
+}
+
+a.scroll-ui span {
+  position: absolute;
+  top: -64px;
+  margin-top: 32px;
+  margin-left: -12px;
+
+  width: 24px;
+  height: 24px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 2s infinite;
+  animation: sdb 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+
+#product-summary-1 a.scroll-ui span {
+  border-color: #FFAA00;
+  margin-left: -6px;
+}
+
+#product-summary-2 a.scroll-ui span {
+  border-color: #00CFCF;
+  margin-left: -18px;
+}
+
+a.scroll-ui span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+a.scroll-ui span:nth-of-type(2) {
+  top: -52px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+a.scroll-ui span:nth-of-type(3) {
+  top: -40px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.glitch {
+  display: inline-block;
+  color: #FFFFFF;
+  line-height: 1;
+  position: relative;
+}
+
+@keyframes glitch-animation-after {
+  0% {
+    clip: rect(65px, 600px, 39px, 0)
+  }
+  6.66667% {
+    clip: rect(19px, 600px, 21px, 0)
+  }
+  13.33333% {
+    clip: rect(80px, 600px, 51px, 0)
+  }
+  20% {
+    clip: rect(6px, 600px, 16px, 0)
+  }
+  26.66667% {
+    clip: rect(31px, 600px, 95px, 0)
+  }
+  33.33333% {
+    clip: rect(94px, 600px, 84px, 0)
+  }
+  40% {
+    clip: rect(84px, 600px, 74px, 0)
+  }
+  46.66667% {
+    clip: rect(97px, 600px, 55px, 0)
+  }
+  53.33333% {
+    clip: rect(7px, 600px, 18px, 0)
+  }
+  60% {
+    clip: rect(24px, 600px, 17px, 0)
+  }
+  66.66667% {
+    clip: rect(28px, 600px, 97px, 0)
+  }
+  73.33333% {
+    clip: rect(61px, 600px, 2px, 0)
+  }
+  80% {
+    clip: rect(0, 0, 0, 0)
+  }
+  100% {
+    clip: rect(0, 0, 0, 0)
+  }
+}
+
+
+@keyframes glitch-animation-before {
+  0% {
+    clip: rect(86px, 600px, 98px, 0)
+  }
+  6.66667% {
+    clip: rect(62px, 600px, 92px, 0)
+  }
+  13.33333% {
+    clip: rect(91px, 600px, 20px, 0)
+  }
+  20% {
+    clip: rect(47px, 600px, 44px, 0)
+  }
+  26.66667% {
+    clip: rect(1px, 600px, 77px, 0)
+  }
+  33.33333% {
+    clip: rect(99px, 600px, 22px, 0)
+  }
+  40% {
+    clip: rect(44px, 600px, 12px, 0)
+  }
+  46.66667% {
+    clip: rect(71px, 600px, 65px, 0)
+  }
+  53.33333% {
+    clip: rect(52px, 600px, 28px, 0)
+  }
+  60% {
+    clip: rect(10px, 600px, 15px, 0)
+  }
+  66.66667% {
+    clip: rect(75px, 600px, 69px, 0)
+  }
+  73.33333% {
+    clip: rect(57px, 600px, 62px, 0)
+  }
+  80% {
+    clip: rect(0, 0, 0, 0)
+  }
+  100% {
+    clip: rect(0, 0, 0, 0)
+  }
+}
+
+.glitch:before,
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(204, 57, 107, 0);
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch:after {
+  left: 2px;
+  text-shadow: -5px 0 rgba(255, 51, 104, 0.5);
+  animation: glitch-animation-after 2s infinite linear alternate-reverse;
+  -webkit-animation: glitch-animation-after 2s infinite linear alternate-reverse;
+}
+
+.glitch:before {
+  left: -2px;
+  text-shadow: 5px 0 rgba(94, 38, 255, 0.5);
+  animation: glitch-animation-before 3s infinite linear alternate-reverse;
+  -webkit-animation: glitch-animation-before 2s infinite linear alternate-reverse;
+}
+
+.slideTop {
+  -webkit-animation: slide-top 2.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: slide-top 2.0s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateX(-50%) translateY(150px);
+            transform: translateX(-50%) translateY(150px);
+  }
+  100% {
+    -webkit-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0);
+  }
+}
+
+#loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: 2;
+}
+
+.loaded {
+  opacity: 0;
+  display: none;
+}
+
+/* CSS loader https://projects.lukehaas.me/css-loaders/ */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #ffffff;
+  font-size: 10px;
+  text-indent: -9999em;
+  width: 120px;
+  height: 120px;
+  margin: -60px -60px;
+  border-radius: 50%;
+  background: #ffffff;
+  background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  background: #000000;
+}
+
+#loader:before {
+  width: 50%;
+  height: 50%;
+  background: #ffffff;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+
+#loader:after {
+  background: #000000;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
