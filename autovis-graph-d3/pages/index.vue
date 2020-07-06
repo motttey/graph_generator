@@ -12,7 +12,7 @@
       <div class="text-center">
         <logo />
         <vuetify-logo />
-        <barchart />
+        <file-upload />
       </div>
 
     </v-flex>
@@ -21,15 +21,17 @@
 
 <script>
 import Logo from '~/components/Logo.vue';
-import Barchart from '~/components/Barchart.vue';
 import VuetifyLogo from '~/components/VuetifyLogo.vue';
+import FileUpload from '~/components/FileUpload.vue';
+import Barchart from '~/components/Barchart.vue';
+
 import * as d3 from "d3";
 
 export default {
   components: {
     Logo,
     VuetifyLogo,
-    Barchart
+    FileUpload
   },
 }
 </script>
