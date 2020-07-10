@@ -1,27 +1,44 @@
 <template>
-    <div>
-        <label>ファイルを選択
-          <input type="file" @change="onFileChange" />
-        </label>
-        <p id="error">csv ファイルのみアップロード可能です</p>
-        <barchart ref="barchart" :data="data" :options="options"></barchart>
-        <v-data-table
-           :headers="headers"
-           :items="csv_data"
-           :items-per-page="5"
-           class="elevation-1"
-         >
-         <template v-slot:items="props">
-           <td class="text-xs-right">{{ props.item.A }}</td>
-           <td class="text-xs-right">{{ props.item.B }}</td>
-           <td class="text-xs-right">{{ props.item.C }}</td>
-           <td class="text-xs-right">{{ props.item.D }}</td>
-           <td class="text-xs-right">{{ props.item.E }}</td>
-           <td class="text-xs-right">{{ props.item.F }}</td>
+  <div>
+    <!--
+    <label>ファイルを選択
+      <input type="file" @change="onFileChange" />
+    </label>
+    -->
+    <p id="error">csv ファイルのみアップロード可能です</p>
+    <barchart ref="barchart" :data="data" :options="options"></barchart>
+    <v-data-table
+       :headers="headers"
+       :items="csv_data"
+       class="cdv-data-1"
+     >
+     <template v-slot:item.colA="props">
+       <v-edit-dialog
+         :return-value.sync="props.item.colA"
+         large
+         persistent
+         @save="save"
+         @cancel="cancel"
+         @open="open"
+         @close="close"
+       >
+         <div>{{ props.item.colA }}</div>
+         <template v-slot:input>
+           <div class="mt-4 title">Update A</div>
          </template>
-       </v-data-table>
-    </div>
-
+         <template v-slot:input>
+           <v-text-field
+             v-model="props.item.colA"
+             label="Edit"
+             single-line
+             counter
+             autofocus
+           ></v-text-field>
+         </template>
+       </v-edit-dialog>
+     </template>
+    </v-data-table>
+  </div>
 </template>
 
 <script>
@@ -32,18 +49,18 @@ export default {
   data: function() {
     return {
       headers: [
-            { text: 'A', align: 'center', sortable: true, value: 'A' },
-            { text: 'B', align: 'center', sortable: true, value: 'B' },
-            { text: 'C', align: 'center', sortable: true, value: 'C' },
-            { text: 'D', align: 'center', sortable: true, value: 'D' },
-            { text: 'E', align: 'center', sortable: true, value: 'E' },
-            { text: 'F', align: 'center', sortable: true, value: 'F' },
+            { text: 'colA', align: 'center', sortable: true, value: 'colA' },
+            { text: 'colB', align: 'center', sortable: true, value: 'colB' },
+            { text: 'colC', align: 'center', sortable: true, value: 'colC' },
+            { text: 'colD', align: 'center', sortable: true, value: 'colD' },
+            { text: 'colE', align: 'center', sortable: true, value: 'colE' },
+            { text: 'colF', align: 'center', sortable: true, value: 'colF' },
           ],
       csv_data: [
-        {A: 20, B: 50, C: 30, D: 50, E: 45, F: 20}
+        {colA: 20, colB: 50, colC: 30, colD: 50, colE: 45, colF: 20}
       ],
       data: {
-        labels: ['A', 'B', 'C', 'D', 'E', 'F'],
+        labels: ['colA', 'colB', 'colC', 'colD', 'colE', 'colF'],
         datasets: [
           {
             label: 'Bar Dataset',
@@ -80,7 +97,22 @@ export default {
       // const files = e.target.files || e.dataTransfer.files;
       this.data.datasets.data = [20, 20, 30, 20, 45, 20];
       this.$refs.barchart.renderChart(this.data, this.options);
-    }
+    },
+    save () {
+      /*
+      this.data.datasets.data = Object.keys(this.csv_data[0]).map((key) => parseInt(this.csv_data[0][key],10) );
+      console.log(this.data.datasets.data);
+      */
+    },
+    cancel () {
+
+    },
+    open () {
+
+    },
+    close () {
+      console.log('Dialog closed')
+    },
   }
 }
 </script>
