@@ -6,38 +6,40 @@
     </label>
     -->
     <p id="error">csv ファイルのみアップロード可能です</p>
+
     <barchart ref="barchart" :data="data" :options="options"></barchart>
-    <v-data-table
-       :headers="headers"
-       :items="csv_data"
-       class="cdv-data-1"
-     >
-     <template v-slot:item.colA="props">
-       <v-edit-dialog
-         :return-value.sync="props.item.colA"
-         large
-         persistent
-         @save="save"
-         @cancel="cancel"
-         @open="open"
-         @close="close"
-       >
-         <div>{{ props.item.colA }}</div>
-         <template v-slot:input>
-           <div class="mt-4 title">Update A</div>
-         </template>
-         <template v-slot:input>
-           <v-text-field
-             v-model="props.item.colA"
-             label="Edit"
-             single-line
-             counter
-             autofocus
-           ></v-text-field>
-         </template>
-       </v-edit-dialog>
-     </template>
-    </v-data-table>
+    <client-only>
+      <v-data-table
+         :headers="headers"
+         :items="csv_data"
+         class="cdv-data-1">
+
+       <template v-slot:item.colA="props">
+         <v-edit-dialog
+           :return-value.sync="props.item.colA"
+           large
+           persistent
+           @save="save"
+           @cancel="cancel"
+           @close="close"
+         >
+           <div>{{ props.item.colA }}</div>
+           <template v-slot:input>
+             <div class="mt-4 title">Update A</div>
+           </template>
+           <template v-slot:input>
+             <v-text-field
+               v-model="props.item.colA"
+               label="Edit"
+               single-line
+               counter
+               autofocus
+             ></v-text-field>
+           </template>
+         </v-edit-dialog>
+       </template>
+     </v-data-table>
+   </client-only>
   </div>
 </template>
 
@@ -57,7 +59,8 @@ export default {
             { text: 'colF', align: 'center', sortable: true, value: 'colF' },
           ],
       csv_data: [
-        {colA: 20, colB: 50, colC: 30, colD: 50, colE: 45, colF: 20}
+        {colA: 20, colB: 50, colC: 30, colD: 50, colE: 45, colF: 20},
+        {colA: 20, colB: 50, colC: 30, colD: 80, colE: 45, colF: 40}
       ],
       data: {
         labels: ['colA', 'colB', 'colC', 'colD', 'colE', 'colF'],
@@ -90,6 +93,7 @@ export default {
     }
   },
   mounted : function(){
+    this.data.datasets.data = [100, 20, 30, 20, 45, 20];
     this.$refs.barchart.renderChart(this.data, this.options);
   },
   methods: {
@@ -99,15 +103,11 @@ export default {
       this.$refs.barchart.renderChart(this.data, this.options);
     },
     save () {
-      /*
-      this.data.datasets.data = Object.keys(this.csv_data[0]).map((key) => parseInt(this.csv_data[0][key],10) );
-      console.log(this.data.datasets.data);
-      */
+      // this.data.datasets.data = this.csv_data[0]["colA"];
+      this.data.datasets.data = [100, 20, 30, 20, 45, 20];
+      this.$refs.barchart.renderChart(this.data, this.options);
     },
     cancel () {
-
-    },
-    open () {
 
     },
     close () {
